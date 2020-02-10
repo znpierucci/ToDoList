@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todolist.FXMLDocumentController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#handleAddButtonAction" text="Add Task" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="45.0" />
+      <Button layoutX="211.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleEditButtonAction" text="Edit Task" AnchorPane.topAnchor="45.0" />
+      <Button layoutX="289.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" text="Delete Task" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="45.0" />
+      <Label layoutX="24.0" layoutY="79.0" text="Task" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="75.0" />
+      <Label layoutX="21.0" layoutY="123.0" text="To Do" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="125.0" />
+      <TextField fx:id="task" layoutX="20.0" layoutY="96.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="96.0" />
+      <MenuBar prefHeight="29.0" prefWidth="400.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleClearButtonAction" text="Clear Lists" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ListView fx:id="list" layoutX="20.0" layoutY="147.0" prefHeight="200.0" prefWidth="360.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="147.0" />
+      <Button layoutX="100.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleCompleteButtonAction" text="Complete Task" AnchorPane.topAnchor="45.0" />
+      <ListView fx:id="completed" layoutX="65.0" layoutY="386.0" prefHeight="200.0" prefWidth="360.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="18.0" layoutY="354.0" text="COMPLETED" AnchorPane.leftAnchor="20.0" />
+      <Button layoutX="126.0" layoutY="349.0" mnemonicParsing="false" onAction="#handleRemoveButtonAction" text="Remove" />
+      <Button layoutX="219.0" layoutY="349.0" mnemonicParsing="false" onAction="#handleIncompleteButtonAction" text="Incomplete" />
+   </children>
+</AnchorPane>
